@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #578cff;
+  --color-primary-dark: #4070e0;
+  --color-primary-light: #f0f6ff;
+  --color-accent: #9cc3ff;
+  --color-background: #ffffff;
+  --color-foreground: #292929;
+  --color-muted: #636363;
+  --color-border: #e8edf5;
+  --color-surface: #f0f6ff;
+  --color-surface-alt: #fafcff;
+  --font-sans: var(--font-jakarta);
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), "Inter", Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* Neurova-style gradient backgrounds */
+.gradient-hero {
+  background: linear-gradient(180deg, #ffffff 0%, #f0f6ff 100%);
+}
+
+.gradient-section {
+  background: linear-gradient(0deg, #fff0 30%, #f0f6ff 100%);
+}
+
+.gradient-btn {
+  background: linear-gradient(211deg, #9cc3ff 0%, #578cff 100%);
+}
+
+.gradient-btn:hover {
+  background: linear-gradient(211deg, #85b5ff 0%, #4070e0 100%);
+}
+
+/* Glass card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 1px 18px rgba(0, 0, 0, 0.03);
+}
+
+/* Soft card shadow */
+.card-shadow {
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.04);
+}
+
+.card-shadow-hover:hover {
+  box-shadow: 0 8px 40px rgba(87, 140, 255, 0.12);
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Subtle pulse glow */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(87, 140, 255, 0.15); }
+  50% { box-shadow: 0 0 40px rgba(87, 140, 255, 0.3); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Marquee for logo scroll */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Fade mask for logo carousel */
+.mask-fade {
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
