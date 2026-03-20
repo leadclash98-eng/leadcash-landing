@@ -110,10 +110,10 @@ export default function AboutPage() {
             <div className="max-w-3xl mx-auto text-center">
               <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-border/50 text-primary text-sm font-semibold mb-8 card-shadow">About Us</span>
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1]">
-                Where Science Meets <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Creativity</span>
+                Where Professionalism Powers <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Opportunity</span>
               </h1>
               <p className="mt-6 text-lg text-muted leading-relaxed max-w-xl mx-auto">
-                We&apos;re here to help businesses grow smarter with powerful outbound marketing, standout digital presence, and results-driven support — proudly delivering world-class services from Sri Lanka.
+                We&apos;re here to help businesses grow smarter with powerful outbound marketing, standout digital presence, and results-driven support, proudly delivering world-class services from Sri Lanka.
               </p>
             </div>
           </AnimateIn>

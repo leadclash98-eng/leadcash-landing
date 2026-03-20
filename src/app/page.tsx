@@ -123,12 +123,12 @@ const steps = [
   {
     step: "02",
     title: "Strategy & Planning",
-    description: "We create a personalized plan for your outbound marketing, LinkedIn growth, content, or operational support — designed to maximize impact.",
+    description: "We create a personalized plan for your outbound marketing, LinkedIn growth, content, or operational support designed to maximize impact.",
   },
   {
     step: "03",
     title: "Execution & Management",
-    description: "Our team implements the strategy: LinkedIn optimization, lead generation, graphic/video content, and virtual assistance — all aligned with your goals.",
+    description: "Our team implements the strategy: LinkedIn optimization, lead generation, graphic/video content, and virtual assistance all aligned with your goals.",
   },
   {
     step: "04",
@@ -383,8 +383,8 @@ export default function Home() {
               transition={{ duration: 0.7 }}
             >
               <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-border/50 text-primary text-sm font-semibold mb-8 card-shadow">
-                <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                Outbound Marketing That Delivers
+                <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.6)]" />
+                Available Now, Let&apos;s Talk
               </span>
             </motion.div>
 
@@ -508,7 +508,7 @@ export default function Home() {
                     <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 text-primary flex items-center justify-center group-hover:from-primary group-hover:to-primary-dark group-hover:text-white transition-all duration-500">
                       {service.icon}
                     </div>
-                    <span className="gradient-btn text-white font-bold text-sm px-4 py-1.5 rounded-full">{service.price}</span>
+                    <span className="gradient-btn text-white font-bold text-lg px-5 py-2 rounded-full">{service.price}</span>
                   </div>
                   <h3 className="text-xl font-bold mb-3">{service.title}</h3>
                   <p className="text-muted text-sm leading-relaxed mb-6">{service.description}</p>
@@ -576,7 +576,7 @@ export default function Home() {
             <div className="text-center max-w-2xl mx-auto mb-16">
               <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6">Testimonials</span>
               <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Client Testimonials</h2>
-              <p className="mt-5 text-muted text-lg leading-relaxed">Don&apos;t just take our word for it — here are a few of our many satisfied clients.</p>
+              <p className="mt-5 text-muted text-lg leading-relaxed">Don&apos;t just take our word for it, here are a few of our many satisfied clients.</p>
             </div>
           </AnimateIn>
           <AnimateIn>

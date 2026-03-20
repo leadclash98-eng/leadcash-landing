@@ -3,9 +3,10 @@ import Image from "next/image";
 
 const footerLinks = {
   Company: [
-    { href: "/about", label: "About Us" },
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
     { href: "/services", label: "Services" },
-    { href: "/work", label: "Our Work" },
+    { href: "/work", label: "Work" },
     { href: "/contact", label: "Contact" },
   ],
   Services: [
@@ -57,6 +58,21 @@ export default function Footer() {
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                 </svg>
+              </a>
+            </div>
+
+            {/* Trustpilot */}
+            <div className="mt-6">
+              <a
+                href="https://www.trustpilot.com/review/leadclash.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/15 transition-all duration-300 cursor-pointer"
+              >
+                <svg className="w-5 h-5 text-[#00b67a]" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                </svg>
+                <span className="text-sm font-semibold text-white/70 hover:text-white">Review us on Trustpilot</span>
               </a>
             </div>
           </div>

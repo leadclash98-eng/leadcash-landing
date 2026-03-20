@@ -1,62 +1,29 @@
-"use client";
-
-import Link from "next/link";
 import AnimateIn from "@/components/AnimateIn";
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-
-const categories = [
-  "All",
-  "LinkedIn Optimization",
-  "Lead Generation",
-  "Graphic Design",
-  "Video Editing",
-];
 
 const projects = [
   {
-    title: "Alpha Lead Academy - LinkedIn Profile Overhaul",
-    category: "LinkedIn Optimization",
-    description: "Complete profile transformation resulting in a 5.2% cold email booking rate — the highest the client had ever achieved.",
-    result: "5.2% booking rate",
+    title: "LinkedIn Profile Optimization",
+    description: "Discover how a powerful LinkedIn profile can attract opportunities and grow your personal brand.",
+    pdfUrl: "https://drive.google.com/file/d/1rEzopzyRw1p_KWyH6ZgSYTeIJCtvFxv3/view?usp=sharing",
   },
   {
-    title: "Trace - B2B Lead Generation Campaign",
-    category: "Lead Generation",
-    description: "Built a targeted prospect list of 2,000+ verified B2B leads with detailed filtering by industry and job title.",
-    result: "2,000+ verified leads",
+    title: "LinkedIn Lead Generation",
+    description: "See how we connect businesses with the right prospects to drive real results.",
+    pdfUrl: "https://drive.google.com/file/d/1qEWOQ8xe69CwANZEA21UF1p4P9H18jP6/view?usp=sharing",
   },
   {
-    title: "Inbox Journeys - Brand Visual Identity",
-    category: "Graphic Design",
-    description: "Designed social media templates, carousel posts, and brand assets that increased engagement by 3x.",
-    result: "3x engagement increase",
+    title: "Graphic Design & Video Editing",
+    description: "Explore our designs and videos that captivate audiences and make brands shine.",
+    pdfUrl: "https://drive.google.com/file/d/1A2WOmCrrZl35IisNdJfI0Fdv5CG1BdgW/view?usp=sharing",
   },
   {
-    title: "UPSTAP - Outreach Campaign Management",
-    category: "Lead Generation",
-    description: "Managed end-to-end LinkedIn and cold email outreach campaigns, generating consistent meeting bookings.",
-    result: "40+ meetings booked",
-  },
-  {
-    title: "Yobogu - Video Content Creation",
-    category: "Video Editing",
-    description: "Produced short-form and long-form video content for social media marketing and brand storytelling.",
-    result: "50+ videos delivered",
-  },
-  {
-    title: "Financial Planning Firm - LinkedIn Optimization",
-    category: "LinkedIn Optimization",
-    description: "Optimized LinkedIn profiles for an entire team, boosting connection acceptance rates and inbound inquiries.",
-    result: "85% acceptance rate",
+    title: "Virtual Assistance & Outreach Support",
+    description: "Check out how we help businesses save time and grow through smart support.",
+    pdfUrl: "https://drive.google.com/file/d/1_b-AEe-EcIk_jPQBf9qM8kAEbNwVHeDJ/view?usp=sharing",
   },
 ];
 
 export default function WorkPage() {
-  const [active, setActive] = useState("All");
-
-  const filtered = active === "All" ? projects : projects.filter((p) => p.category === active);
-
   return (
     <>
       {/* Hero */}
@@ -77,53 +44,34 @@ export default function WorkPage() {
         </div>
       </section>
 
-      {/* Filters */}
+      {/* Projects */}
       <section className="pb-24 md:pb-32">
         <div className="max-w-7xl mx-auto px-6">
-          <AnimateIn>
-            <div className="flex flex-wrap justify-center gap-3 mb-14">
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setActive(cat)}
-                  className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 cursor-pointer ${
-                    active === cat
-                      ? "gradient-btn text-white shadow-lg shadow-primary/20"
-                      : "bg-white border border-border/50 text-muted hover:text-primary hover:border-primary card-shadow"
-                  }`}
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
-          </AnimateIn>
-
-          <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <AnimatePresence mode="popLayout">
-              {filtered.map((project) => (
-                <motion.div
-                  key={project.title}
-                  layout
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
-                >
-                  <div className="group p-8 rounded-3xl border border-border/50 bg-white card-shadow card-shadow-hover transition-all duration-500 hover:-translate-y-1 h-full flex flex-col cursor-pointer">
-                    <div className="flex-1">
-                      <span className="text-xs font-semibold text-primary gradient-btn text-white px-3 py-1 rounded-full">{project.category}</span>
-                      <h3 className="text-lg font-bold mt-5 mb-3 group-hover:text-primary transition-colors">{project.title}</h3>
-                      <p className="text-muted text-sm leading-relaxed">{project.description}</p>
-                    </div>
-                    <div className="mt-6 pt-6 border-t border-border/30">
-                      <div className="text-xs font-semibold text-muted uppercase tracking-wider">Key Result</div>
-                      <div className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mt-1">{project.result}</div>
-                    </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {projects.map((project, i) => (
+              <AnimateIn key={project.title} delay={i * 0.1}>
+                <div className="group p-8 md:p-10 rounded-3xl border border-border/50 bg-white card-shadow card-shadow-hover transition-all duration-500 hover:-translate-y-1 h-full flex flex-col cursor-pointer">
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">{project.title}</h3>
+                    <p className="text-muted text-sm leading-relaxed">{project.description}</p>
                   </div>
-                </motion.div>
-              ))}
-            </AnimatePresence>
-          </motion.div>
+                  <div className="mt-6">
+                    <a
+                      href={project.pdfUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="gradient-btn text-white px-6 py-3 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 inline-flex items-center gap-2 cursor-pointer"
+                    >
+                      View Results
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </AnimateIn>
+            ))}
+          </div>
         </div>
       </section>
 
