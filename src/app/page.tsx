@@ -70,8 +70,8 @@ const services = [
     description: "Build targeted prospect lists with verified contacts to fuel your sales pipeline with qualified B2B leads.",
     benefits: [
       "LinkedIn prospect list building",
-      "Lead data collection (Name, Email, Job Title, etc.)",
-      "Lead filtering by industry, job title, location",
+      "Lead data collection (Name, Email, Job, Industry, Company, etc.)",
+      "Lead filtering based on industry, job title, location, etc.",
       "LinkedIn Outreach Strategy Development",
     ],
     icon: (
@@ -85,10 +85,10 @@ const services = [
     price: "$10/hour",
     description: "Create scroll-stopping visual content that builds your authority and drives engagement.",
     benefits: [
-      "Personalized Video Editing for Outreach",
-      "Long-form & short-form video editing",
+      "Personalized Video Editing for Outreach Campaigns",
+      "Long-form video editing",
+      "Short-form video editing",
       "Social Media & Carousel post design",
-      "Brand-aligned creative assets",
     ],
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
@@ -207,7 +207,7 @@ const faqs = [
   },
   {
     q: "What kind of leads will I get from LinkedIn Lead Generation?",
-    a: "We provide verified B2B leads tailored to your target audience. Leads include names, job titles, company information, email addresses, and industry-specific details. We focus on quality over quantity.",
+    a: "We provide verified B2B leads tailored to your target audience. Leads include names, job titles, company information, email addresses, and industry-specific details. We focus on quality over quantity to help you generate meaningful connections.",
   },
   {
     q: "Can you handle LinkedIn outreach on my behalf?",
@@ -218,8 +218,24 @@ const faqs = [
     a: "Absolutely. We create scroll-stopping visuals including carousel posts, short-form and long-form videos, and personalized video edits for outreach campaigns, tailored to your brand style and audience.",
   },
   {
+    q: "How is the Virtual Assistance & Outreach Support service structured?",
+    a: "You can hire our VA services by the hour. We manage LinkedIn and email campaigns, CRM updates, calendar management, data entry, and other operational tasks, giving you more time to focus on high-impact business work.",
+  },
+  {
+    q: "How do you ensure lead quality for LinkedIn Lead Generation?",
+    a: "We use a combination of verified databases, LinkedIn filters, and manual quality checks to ensure each lead meets your specified criteria. This ensures you only get relevant and actionable contacts.",
+  },
+  {
+    q: "Can I see examples of your previous work?",
+    a: "Yes! Each service page includes a \"View Previous Work\" link where you can see real samples of profiles, outreach campaigns, graphics, and videos we've created for other clients.",
+  },
+  {
     q: "How do I start working with you?",
     a: "Simply select the service you need, share your requirements via our contact form or email, and we'll provide a tailored plan with pricing and timelines. Once agreed, we start working immediately.",
+  },
+  {
+    q: "What if I'm not satisfied with the results?",
+    a: "We prioritize client satisfaction. For services like LinkedIn optimization and graphics/video editing, we offer revisions until you are happy. For ongoing services like lead generation or VA support, we continuously adapt our approach based on your feedback.",
   },
 ];
 
@@ -489,7 +505,7 @@ export default function Home() {
       {/* Services */}
       <section className="py-24 md:py-32 bg-surface relative overflow-hidden">
         <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="max-w-[90rem] mx-auto px-6 relative z-10">
           <AnimateIn>
             <div className="text-center max-w-2xl mx-auto mb-16">
               <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6">What We Offer</span>

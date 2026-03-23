@@ -10,10 +10,10 @@ const footerLinks = {
     { href: "/contact", label: "Contact" },
   ],
   Services: [
-    { href: "/services#linkedin-optimization", label: "LinkedIn Optimization" },
-    { href: "/services#lead-generation", label: "Lead Generation" },
-    { href: "/services#graphic-design", label: "Graphic & Video" },
-    { href: "/services#virtual-assistance", label: "Virtual Assistance" },
+    { href: "/services#linkedin-optimization", label: "LinkedIn Profile Optimization" },
+    { href: "/services#lead-generation", label: "LinkedIn Lead Generation" },
+    { href: "/services#graphic-design", label: "Graphic Design & Video Editing" },
+    { href: "/services#virtual-assistance", label: "Virtual Assistance & Outreach Support" },
   ],
   Legal: [
     { href: "/privacy", label: "Privacy Policy" },
@@ -27,8 +27,8 @@ export default function Footer() {
     <footer className="bg-foreground text-white relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 blur-[150px] rounded-full pointer-events-none" />
       <div className="max-w-7xl mx-auto px-6 py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
-          <div className="lg:col-span-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1.5fr_1fr] gap-10">
+          <div>
             <Link href="/" className="flex items-center gap-3 mb-6">
               <Image src="/logo-white.png" alt="Lead Clash" width={36} height={36} />
               <span className="text-xl font-bold tracking-tight">Lead Clash</span>

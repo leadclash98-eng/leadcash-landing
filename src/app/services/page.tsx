@@ -30,7 +30,7 @@ const services = [
     description: "Build targeted prospect lists with verified contacts to fuel your sales pipeline with qualified B2B leads.",
     benefits: [
       "LinkedIn prospect list building",
-      "Lead data collection (Name, Email, Job Title, Industry, Company, etc.)",
+      "Lead data collection (Name, Email, Job, Industry, Company, etc.)",
       "Lead filtering based on industry, job title, location, etc.",
       "LinkedIn Outreach Strategy Development",
     ],
