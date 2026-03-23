@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Lead Clash - Where Professionalism Powers Opportunity",
     description:
-      "Meet the team behind Lead Clash. 80+ happy clients, 120+ projects completed, and 8000+ working hours.",
+      "Meet the team behind Lead Clash. 80+ happy clients, 120+ projects completed, and 8000+ working hours. Founded in 2021, delivering world-class LinkedIn marketing and lead generation from Sri Lanka.",
     url: "https://leadclash.com/about",
   },
 };

@@ -13,6 +13,12 @@ export const metadata: Metadata = {
       "End-to-end outbound marketing solutions: LinkedIn optimization, B2B lead generation, graphic design, video editing, and virtual assistance.",
     url: "https://leadclash.com/services",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Services - LinkedIn Optimization, Lead Generation & More",
+    description:
+      "End-to-end outbound marketing solutions: LinkedIn optimization, B2B lead generation, graphic design, video editing, and virtual assistance.",
+  },
 };
 
 export default function ServicesLayout({ children }: { children: React.ReactNode }) {

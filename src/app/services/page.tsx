@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import AnimateIn from "@/components/AnimateIn";
+import Breadcrumb from "@/components/Breadcrumb";
 
 const services = [
   {
@@ -81,8 +82,9 @@ const services = [
 export default function ServicesPage() {
   return (
     <>
+      <Breadcrumb items={[{ label: "Services" }]} />
       {/* Hero */}
-      <section className="pt-36 pb-20 gradient-hero relative overflow-hidden">
+      <section className="pt-8 pb-20 gradient-hero relative overflow-hidden">
         <div className="absolute top-20 left-[10%] w-[400px] h-[400px] rounded-full bg-accent/10 blur-[120px] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <AnimateIn>

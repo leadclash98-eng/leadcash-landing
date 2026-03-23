@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import AnimateIn from "@/components/AnimateIn";
 import Counter from "@/components/Counter";
+import Breadcrumb from "@/components/Breadcrumb";
 
 const philosophy = [
   {
@@ -106,10 +107,30 @@ const purpose = [
 ];
 
 export default function AboutPage() {
+  const teamSchema = {
+    "@context": "https://schema.org",
+    "@graph": team.map((member) => ({
+      "@type": "Person",
+      name: member.name,
+      jobTitle: member.role,
+      image: `https://leadclash.com${member.image}`,
+      worksFor: {
+        "@type": "Organization",
+        name: "Lead Clash",
+        url: "https://leadclash.com",
+      },
+    })),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(teamSchema) }}
+      />
+      <Breadcrumb items={[{ label: "About Us" }]} />
       {/* Hero */}
-      <section className="pt-36 pb-20 gradient-hero relative overflow-hidden">
+      <section className="pt-8 pb-20 gradient-hero relative overflow-hidden">
         <div className="absolute top-20 right-[10%] w-[400px] h-[400px] rounded-full bg-primary/10 blur-[120px] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <AnimateIn>

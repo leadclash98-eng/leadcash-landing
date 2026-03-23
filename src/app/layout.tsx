@@ -185,6 +185,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://calendly.com" />
+        <link rel="preconnect" href="https://www.trustpilot.com" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+      </head>
       <body className={`${jakarta.variable} font-sans antialiased`}>
         <script
           type="application/ld+json"

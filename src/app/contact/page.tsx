@@ -2,13 +2,15 @@
 
 import { useState } from "react";
 import AnimateIn from "@/components/AnimateIn";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
     <>
-      <section className="pt-36 pb-24 gradient-hero relative overflow-hidden">
+      <Breadcrumb items={[{ label: "Contact" }]} />
+      <section className="pt-8 pb-24 gradient-hero relative overflow-hidden">
         <div className="absolute top-20 right-[10%] w-[400px] h-[400px] rounded-full bg-primary/10 blur-[120px] pointer-events-none" />
         <div className="absolute bottom-0 left-[5%] w-[300px] h-[300px] rounded-full bg-accent/10 blur-[100px] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
