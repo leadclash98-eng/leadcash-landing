@@ -8,7 +8,7 @@ const services = [
     id: "linkedin-optimization",
     title: "LinkedIn Profile Optimization",
     price: "$70",
-    priceNote: "one-time",
+    priceNote: "Per Profile",
     description: "Transform your LinkedIn into a powerful personal brand that attracts opportunities and builds credibility.",
     benefits: [
       "Complete LinkedIn profile optimization",
@@ -26,7 +26,7 @@ const services = [
     id: "lead-generation",
     title: "LinkedIn Lead Generation",
     price: "$10",
-    priceNote: "per hour",
+    priceNote: "Per Hour",
     description: "Build targeted prospect lists with verified contacts to fuel your sales pipeline with qualified B2B leads.",
     benefits: [
       "LinkedIn prospect list building",
@@ -44,7 +44,7 @@ const services = [
     id: "graphic-design",
     title: "Graphic Design & Video Editing",
     price: "$10",
-    priceNote: "per hour",
+    priceNote: "Per Hour",
     description: "Create scroll-stopping visual content that builds your authority and drives engagement.",
     benefits: [
       "Personalized Video Editing for Outreach Campaigns",
@@ -62,7 +62,7 @@ const services = [
     id: "virtual-assistance",
     title: "Virtual Assistance & Outreach Support",
     price: "$10",
-    priceNote: "per hour",
+    priceNote: "Per Hour",
     description: "Delegate your daily operational tasks so you can focus on high-impact business activities.",
     benefits: [
       "LinkedIn & Cold email campaign management",
@@ -100,7 +100,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services */}
-      <section className="pb-24 md:pb-32">
+      <section className="py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-6 space-y-8">
           {services.map((service, i) => (
             <AnimateIn key={service.id} delay={i * 0.1}>

@@ -75,7 +75,7 @@ const jsonLd = {
       name: "Lead Clash",
       url: "https://leadclash.com",
       logo: "https://leadclash.com/logo.png",
-      email: "hello@leadclash.com",
+      email: "yasiru@leadclash.com",
       foundingDate: "2021",
       description:
         "Lead Clash helps businesses drive growth with LinkedIn optimization, B2B lead generation, graphic design, video editing, and virtual assistance.",
@@ -88,7 +88,7 @@ const jsonLd = {
       sameAs: ["https://www.linkedin.com/company/leadclash"],
       contactPoint: {
         "@type": "ContactPoint",
-        email: "hello@leadclash.com",
+        email: "yasiru@leadclash.com",
         contactType: "sales",
         availableLanguage: ["English"],
       },

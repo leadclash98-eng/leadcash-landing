@@ -50,7 +50,7 @@ const features = [
 const services = [
   {
     title: "LinkedIn Profile Optimization",
-    price: "$70",
+    price: "$70/ per profile",
     description: "Transform your LinkedIn into a powerful personal brand that attracts opportunities and builds credibility.",
     benefits: [
       "Complete LinkedIn profile optimization",
@@ -66,7 +66,7 @@ const services = [
   },
   {
     title: "LinkedIn Lead Generation",
-    price: "$10/hour",
+    price: "$10/ per hour",
     description: "Build targeted prospect lists with verified contacts to fuel your sales pipeline with qualified B2B leads.",
     benefits: [
       "LinkedIn prospect list building",
@@ -82,7 +82,7 @@ const services = [
   },
   {
     title: "Graphic Design & Video Editing",
-    price: "$10/hour",
+    price: "$10/ per hour",
     description: "Create scroll-stopping visual content that builds your authority and drives engagement.",
     benefits: [
       "Personalized Video Editing for Outreach Campaigns",
@@ -98,7 +98,7 @@ const services = [
   },
   {
     title: "Virtual Assistance & Outreach",
-    price: "$10/hour",
+    price: "$10/ per hour",
     description: "Delegate your daily operational tasks so you can focus on high-impact business activities.",
     benefits: [
       "LinkedIn & Cold email campaign management",
@@ -162,7 +162,7 @@ const testimonials = [
   {
     name: "Emma Valahu",
     role: "Founder at Inbox Journeys",
-    quote: "Yasiru is a dynamo! He produces really high quality work extremely fast. Want a revision? No problem — it's done before you can even go and make a cup of coffee!",
+    quote: "Yasiru is a dynamo! He produces really high quality work extremely fast. Want a revision? No problem - it's done before you can even go and make a cup of coffee!",
     initials: "EV",
     image: "/testimonials/emma.png",
   },
@@ -320,9 +320,8 @@ function TestimonialCarousel() {
                 setDirection(i > current ? 1 : -1);
                 setCurrent(i);
               }}
-              className={`h-2 rounded-full transition-all duration-400 cursor-pointer ${
-                i === current ? "bg-primary w-8" : "bg-border w-2 hover:bg-primary/30"
-              }`}
+              className={`h-2 rounded-full transition-all duration-400 cursor-pointer ${i === current ? "bg-primary w-8" : "bg-border w-2 hover:bg-primary/30"
+                }`}
               aria-label={`Go to testimonial ${i + 1}`}
             />
           ))}
@@ -355,9 +354,8 @@ function FAQ({ question, answer, index }: { question: string; answer: string; in
           <motion.div
             animate={{ rotate: open ? 135 : 0 }}
             transition={{ duration: 0.3 }}
-            className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-colors duration-300 ${
-              open ? "bg-primary text-white" : "bg-surface text-muted"
-            }`}
+            className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-colors duration-300 ${open ? "bg-primary text-white" : "bg-surface text-muted"
+              }`}
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
