@@ -12,14 +12,8 @@ const projects = [
   {
     title: "LinkedIn Profile Optimization",
     description:
-      "We transform LinkedIn profiles into powerful personal brands that attract opportunities. Our optimization process covers headlines, summaries, experience sections, skills, recommendations, and custom banner design.",
-    results: [
-      "300% average increase in profile views",
-      "5x more connection requests",
-      "Keyword-optimized for LinkedIn search",
-      "Custom branded banner design included",
-    ],
-    skills: ["Profile Copywriting", "SEO Keywords", "Banner Design", "Content Strategy"],
+      "Discover how a powerful LinkedIn profile can attract opportunities and grow your personal brand.",
+    buttonLabel: "Explore Results",
     pdfUrl:
       "https://drive.google.com/file/d/1rEzopzyRw1p_KWyH6ZgSYTeIJCtvFxv3/view?usp=sharing",
     icon: (
@@ -31,14 +25,8 @@ const projects = [
   {
     title: "LinkedIn Lead Generation",
     description:
-      "We build targeted prospect lists with verified B2B contacts tailored to your ideal customer profile. Every lead includes name, email, job title, company, industry, and location data.",
-    results: [
-      "500+ qualified leads per campaign",
-      "95% data accuracy rate",
-      "Filtered by industry, title, and location",
-      "Ready-to-use prospect lists",
-    ],
-    skills: ["Prospect Research", "Data Enrichment", "List Building", "ICP Targeting"],
+      "See how we connect businesses with the right prospects to drive real results.",
+    buttonLabel: "View Results",
     pdfUrl:
       "https://drive.google.com/file/d/1qEWOQ8xe69CwANZEA21UF1p4P9H18jP6/view?usp=sharing",
     icon: (
@@ -50,14 +38,8 @@ const projects = [
   {
     title: "Graphic Design & Video Editing",
     description:
-      "From social media carousels to personalized outreach videos, we create visual content that captures attention and drives engagement across all platforms.",
-    results: [
-      "Scroll-stopping carousel designs",
-      "Personalized video outreach content",
-      "Short-form and long-form editing",
-      "Brand-consistent visual assets",
-    ],
-    skills: ["Carousel Design", "Video Editing", "Motion Graphics", "Brand Identity"],
+      "Explore our designs and videos that captivate audiences and make brands shine.",
+    buttonLabel: "View Results",
     pdfUrl:
       "https://drive.google.com/file/d/1A2WOmCrrZl35IisNdJfI0Fdv5CG1BdgW/view?usp=sharing",
     icon: (
@@ -69,14 +51,8 @@ const projects = [
   {
     title: "Virtual Assistance & Outreach Support",
     description:
-      "We handle LinkedIn campaigns, cold email outreach, CRM updates, calendar management, and daily operational tasks so you can focus on closing deals.",
-    results: [
-      "End-to-end campaign management",
-      "CRM and pipeline maintenance",
-      "Calendar and inbox management",
-      "Consistent daily execution",
-    ],
-    skills: ["Campaign Management", "CRM Updates", "Email Outreach", "Task Coordination"],
+      "Check out how we help businesses save time and grow through smart support.",
+    buttonLabel: "View Results",
     pdfUrl:
       "https://drive.google.com/file/d/1_b-AEe-EcIk_jPQBf9qM8kAEbNwVHeDJ/view?usp=sharing",
     icon: (
@@ -193,67 +169,22 @@ export default function WorkPage() {
             </div>
           </AnimateIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {projects.map((project, i) => (
               <AnimateIn key={project.title} delay={i * 0.12}>
-                <div className="group p-8 md:p-10 rounded-3xl border border-border/50 bg-white card-shadow card-shadow-hover transition-all duration-500 hover:-translate-y-1 h-full flex flex-col">
-                  {/* Icon & Title */}
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                      {project.icon}
-                    </div>
-                    <h3 className="text-xl font-bold group-hover:text-primary transition-colors pt-2">
-                      {project.title}
-                    </h3>
+                <div className="group p-8 rounded-3xl border border-border/50 bg-white card-shadow card-shadow-hover transition-all duration-500 hover:-translate-y-1 h-full flex flex-col items-center text-center">
+                  <div className="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-5">
+                    {project.icon}
                   </div>
 
-                  {/* Description */}
+                  <h3 className="text-lg font-bold group-hover:text-primary transition-colors mb-3">
+                    {project.title}
+                  </h3>
+
                   <p className="text-muted text-sm leading-relaxed mb-6">
                     {project.description}
                   </p>
 
-                  {/* Results */}
-                  <div className="mb-6">
-                    <h4 className="text-xs font-semibold uppercase tracking-wider text-foreground/60 mb-3">
-                      Key Results
-                    </h4>
-                    <ul className="space-y-2">
-                      {project.results.map((result) => (
-                        <li key={result} className="flex items-start gap-2.5 text-sm text-muted">
-                          <svg
-                            className="w-4 h-4 text-primary mt-0.5 shrink-0"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            strokeWidth={2.5}
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M4.5 12.75l6 6 9-13.5"
-                            />
-                          </svg>
-                          {result}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Skills / Deliverables */}
-                  <div className="mb-8">
-                    <div className="flex flex-wrap gap-2">
-                      {project.skills.map((skill) => (
-                        <span
-                          key={skill}
-                          className="px-3 py-1 rounded-full bg-primary/5 border border-primary/10 text-xs font-medium text-primary"
-                        >
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* CTA */}
                   <div className="mt-auto">
                     <a
                       href={project.pdfUrl}
@@ -261,7 +192,7 @@ export default function WorkPage() {
                       rel="noopener noreferrer"
                       className="gradient-btn text-white px-6 py-3 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 inline-flex items-center gap-2 cursor-pointer"
                     >
-                      View Case Study
+                      {project.buttonLabel}
                       <svg
                         className="w-4 h-4"
                         fill="none"
